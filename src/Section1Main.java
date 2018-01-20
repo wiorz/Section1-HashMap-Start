@@ -6,36 +6,39 @@ import java.util.Scanner;
 public class Section1Main {
 
     public static void main(String[] args) {
-        Scanner in = null;
-
-        // Checking for proper number of command line args
-        if (args.length != 1) {
-            // System.err.println(
-            //        "Input filename  and hashmap command must be provided on command line.");
-            System.exit(1);
-        }
-
-        // Opening scanner to read input file
-        try {
-            in = new Scanner(new File(args[0]));
-
-        } catch (FileNotFoundException e) {
-            System.err.println("File not found!");
-            e.printStackTrace();
-            System.exit(1);
-        }
-
+       
+        // TODO: write Scanner declaration here
+        
+        
+        //Stores the HashMap created by countDepartures for later printing
         HashMap<String, Integer> flights = countDepartures(in);
+       
+        
+        //Look at write up to understand the alphabetical sorting 
+        ArrayList<String> airportsSorted = new ArrayList<String>(
+                flights.keySet());
+        Collections.sort(airportsSorted);
 
-        // TODO: write code here
+        //TODO: Loop over HashMap and print 
 
     }
 
+    /*
+    * function: countDepartures(Scanner in) 
+    *
+    * parameter in: in Scanner is used to loop over input file
+    * 
+    * This function loops over the input file to create a HashMap 
+    * that maps from airport codes to number of flights.
+    * 
+    * returns: HashMap<String, Integer> that was created 
+    */
     public static HashMap<String, Integer> countDepartures(Scanner in) {
 
         HashMap<String, Integer> airportToNumFlights = new HashMap<String, Integer>();
 
-        // TODO: write code here
+        // TODO: HashMap write code here
+        
 
         return airportToNumFlights;
     }
