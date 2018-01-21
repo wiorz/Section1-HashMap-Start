@@ -67,7 +67,7 @@ then
         #
         #(note) the redirecting to silent is only there to keep the diff op
         #from displaying to stdout
-        if diff -B -Z -q out "../$inputdir/$(basename $infile .in).out" > silent
+        if diff -B -w -q out "../$inputdir/$(basename $infile .in).out" > silent
         then
             echo "Passed $main test \"$(basename $infile .in).in\""
             echo ""
@@ -75,7 +75,7 @@ then
         else
             echo Failed $main test \"$(basename $infile .in).in\"
             echo "*********** OUTPUT: Actual output followed by expected."
-            diff -B -Z out "../$inputdir/$(basename $infile .in).out"
+            diff -B -w out "../$inputdir/$(basename $infile .in).out"
             echo  "*******************************"
             echo ""
         fi
@@ -96,6 +96,6 @@ then
 # Not enough parameters given to script.
 else
     echo
-    echo "usage: ./grade.sh PA1Main PublicTestCases"
+    echo "example usage: ./grade.sh Section1Main PublicTestCases"
 fi
 echo
