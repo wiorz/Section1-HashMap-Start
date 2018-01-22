@@ -8,10 +8,10 @@ public class Section1Main {
     public static void main(String[] args) {
        
         // TODO: write Scanner declaration here
-        
+        Scanner in = null;
         
         //Stores the HashMap created by countDepartures for later printing
-        //HashMap<String, Integer> flights = countDepartures(in);
+        HashMap<String, Integer> flights = countDepartures(in);
        
         
         //Look at write up to understand the alphabetical sorting 
