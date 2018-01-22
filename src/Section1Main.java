@@ -13,12 +13,12 @@ public class Section1Main {
         Scanner in = null;
         
         //Stores the HashMap created by countDepartures for later printing
-        //HashMap<String, Integer> flights = countDepartures(in);
+        HashMap<String, Integer> flights = countDepartures(in);
        
         //Look at write up to understand the alphabetical sorting 
-        //ArrayList<String> airportsSorted = new ArrayList<String>(
-        //        flights.keySet());
-        //Collections.sort(airportsSorted);
+        ArrayList<String> airportsSorted = new ArrayList<String>(
+                flights.keySet());
+        Collections.sort(airportsSorted);
 
         //TODO: Loop over HashMap and print 
 
