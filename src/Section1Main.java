@@ -1,19 +1,20 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Section1Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
        
         // TODO: write Scanner declaration here
-        
+        Scanner in = null;
         
         //Stores the HashMap created by countDepartures for later printing
         HashMap<String, Integer> flights = countDepartures(in);
        
-        
         //Look at write up to understand the alphabetical sorting 
         ArrayList<String> airportsSorted = new ArrayList<String>(
                 flights.keySet());
